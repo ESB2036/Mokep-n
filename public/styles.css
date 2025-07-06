@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+    font-family: "VT323", monospace;
+    background-color: #222831;
+    color: #eee;
+    font-size: 22px;
+    text-align: center;
+}
+
+.title {
+    font-family: "Press Start 2P", system-ui;
+    color: #76ABAE;
+    font-weight: 400;
+    font-size: 50px;
+}
+
+.subtitle {
+    font-family: "Press Start 2P", system-ui;
+    color: #76ABAE;
+    font-size: 20px;
+}
+
+button {
+    user-select: none;
+}
+
+#section-select-mokepon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#section-select-mokepon input {
+    display: none;
+
+}
+
+#section-select-mokepon input:checked + label{
+    background-color: #1E3E62;
+}
+
+#container-cards, #container-attack-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+#container-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mokepon-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #31363F;
+    box-sizing: border-box;
+    width: 180px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 20px;
+    gap: 5px;
+}
+
+.mokepon-card img {
+    width: 80px;
+}
+
+.button-action {
+    font-family: "VT323", monospace;
+    font-size: 20px;
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 2px solid #76ABAE;
+    color: #76ABAE;
+}
+
+.button-action:active {
+    background-color: #1E3E62;
+}
+
+#button-select-mokepon {
+    margin-top: 22px;
+}
+
+#section-give-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#input-mokepon-player-name {
+    font-family: "VT323", monospace;
+    font-size: 20px;
+    margin-bottom: 22px;
+    border-radius: 10px;
+    width: 250px;
+    height: 25px;
+}
+
+#section-map {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#map {
+    border: 2px solid #76ABAE;
+}
+
+#div-movement-buttons {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 22px;
+}
+
+.movement-button {
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 2px solid #76ABAE;
+    color: #76ABAE;
+}
+
+.movement-button:active {
+    background-color: #1E3E62;
+}
+
+#div-vertical-movement-buttons {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.vertical-button {
+    width: 66px;
+    height: 33px;
+}
+
+.horizontal-button {
+    width: 66px;
+    height: 69px;
+}
+
+#section-select-attack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-attack {
+    font-family: "VT323", monospace;
+    width: 60px;
+    background-color: #31363F;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-size: 18px;
+    color: #eee;
+    padding: 10px;
+    border-color: transparent;
+}
+
+#div-messages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 25px;
+    padding: 15px;
+    width: 300px;
+    background: #31363F;
+    margin-top: 15px;
+    border-radius: 20px;
+}
+
+#button-reset-game, #button-continue-game{
+    border: 0;
+}
+
+#div-attacks {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    text-align: center;
+    gap: 10px;
+}
+
+#mokepon-player-lives, #mokepon-enemy-lives {
+    font-size: 32px;
+    margin-bottom: 0;
+}
+
+#div-attacks div {
+    background-color: #31363F;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+@media (max-width: 400px) {
+    #container-cards {
+        flex-direction: column;
+    }
+
+    #container-attack-buttons{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .title {
+        font-size: 38px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+
+    #div-messages {
+        width: 250px;
+    }
+}
+
+@media (max-width: 360px) {
+    .title {
+        font-size: 30px;
+    }
+}

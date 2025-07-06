@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mokepón</title>
+        <link rel="stylesheet" href="./styles.css" />
+        <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    </head>
+    <body>        
+        <section id="section-select-mokepon">
+            <h1 class="title">Mokepón</h1>
+            
+            <h2 class="subtitle">¡Elige tu mokepón!</h2>
+
+            <div id="container-cards">
+            </div>
+
+            <button id="button-select-mokepon" class="button-action">Seleccionar</button>
+        </section>
+
+        <section id="section-give-name">
+            <h1 class="title">Mokepón</h1>
+
+            <h2 class="subtitle">Dale un nombre</h2>
+            <p>(Opcional: puedes dejarlo vacío)</p>
+
+            <input type="text" id="input-mokepon-player-name">
+            
+            <button id="button-mokepon-player-name" class="button-action">Continuar</button>
+        </section>
+
+        <section id="section-map">
+            <h2 class="subtitle">¡Recorre el mapa con tu [mokepón_jugador]!</h2>
+            
+            <canvas id="map"></canvas>
+            
+            <div id="div-movement-buttons">
+                <button class="horizontal-button movement-button"
+                    onmousedown="moveLeft()"
+                    onmouseup="stopMovement()"
+                    ontouchstart="moveLeft()"
+                    ontouchend="stopMovement()"
+                    >◀</button>
+                <div id="div-vertical-movement-buttons">
+                    <button class="vertical-button movement-button"
+                        onmousedown="moveUp()"
+                        onmouseup="stopMovement()"
+                        ontouchstart="moveUp()"
+                        ontouchend="stopMovement()"
+                        >▲</button>
+                    <button class="vertical-button movement-button"
+                        onmousedown="moveDown()"
+                        onmouseup="stopMovement()"
+                        ontouchstart="moveDown()"
+                        ontouchend="stopMovement()"
+                        >▼</button>
+                </div>
+                <button class="horizontal-button movement-button"
+                    onmousedown="moveRight()"
+                    onmouseup="stopMovement()"
+                    ontouchstart="moveRight()"
+                    ontouchend="stopMovement()"
+                    >▶</button>
+            </div>
+        </section>
+
+        <section id="section-select-attack">
+            <h1 class="title">Mokepón</h1>
+
+            <h2 class="subtitle">Elige tus ataques</h2>
+
+            <div id="container-attack-buttons">
+            </div>
+
+            <div id="div-messages">
+                <p id="p-battle-result">¡Buena suerte!</p>
+
+                <section id="section-reset-game">
+                    <button id="button-reset-game" class="button-action">Reiniciar</button>
+                </section>
+            </div>
+
+            <div id="div-attacks">
+                <div>
+                    <p id="mokepon-player-wins">0</p>
+                    <p id="mokepon-player-name">[mokepón_jugador]</p>
+                    <div id="div-player-attacks"></div>
+                </div>
+                <div>
+                    <p id="mokepon-enemy-wins">0</p>
+                    <p id="mokepon-enemy-name">[mokepón_enemy]</p>
+                    <div id="div-enemy-attacks"></div>
+                </div>
+            </div>
+        </section>
+
+        <script src="./js/mokepon.js"></script>
+    </body>
+</html>
